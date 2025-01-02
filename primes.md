@@ -1,9 +1,7 @@
 We have all probably heard of prime number in different contexts. 
 As a reminder: a number $$x \in \mathbb{N}$$ is called prime if and only if it is greater than 1 and is not divisible by any other numbers except 1 and itself. In other words, a number $$x \in \mathbb{N}$$ is prime if:
 
-$$
-x \in \mathbb{N} \text{ is prime} \iff (\forall a, b \in \mathbb{N}: (a \cdot b = x \implies a = 1 \lor b = 1)).
-$$
+$$x \in \mathbb{N} \text{ is prime} \iff (\forall a, b \in \mathbb{N}: (a \cdot b = x \implies a = 1 \lor b = 1)).$$
 
 From this definition, we can immediately see that the first few prime numbers are: 2, 3, 5, 7, 11, and so on. At first glance, this may not seem particularly interesting, but after some thought, we realize that prime numbers are the basic building blocks of our number system.
 
@@ -70,4 +68,4 @@ Let $$n \in \mathbb{N}$$ be the smallest number such that its prime factorizatio
 
 Thus, the prime factorization of a number is unique.
 
-And with this we also have proven the ### Fundamental theorem of arithemtic
+And with this we also have proven the ###Fundamental theorem of arithemtic
