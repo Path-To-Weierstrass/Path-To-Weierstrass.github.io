@@ -70,4 +70,5 @@ Let $$n \in \mathbb{N}$$ be the smallest number such that its prime factorizatio
 
 Thus, the prime factorization of a number is unique.
 
-And with this we also have proven the ###Fundamental theorem of arithemtic
+And with this we also have proven the 
+### Fundamental theorem of arithemtic
