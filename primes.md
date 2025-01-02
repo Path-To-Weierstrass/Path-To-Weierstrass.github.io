@@ -60,7 +60,7 @@ using Primes
 	end
  ````
 
-You might quickly realize that this algorithm is super inefficient -  issues on optimization and the importance of "computability" of prime numbers are discussed in [Prime Number Computation](/primes/prime-computation")
+You might quickly realize that this algorithm is super inefficient -  issues on optimization and the importance of "computability" of prime numbers are discussed in [Prime Number Computation](/primes/prime-computation)
 
 
 
