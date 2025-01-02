@@ -4,3 +4,5 @@ permalink: /
 
 
 ##### it works
+
+$x^2$
