@@ -4,11 +4,13 @@
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     renderMathInElement(document.body, {
-      // Configure delimiters for inline and block math
+      // Ensure delimiters are set for both inline and block math
       delimiters: [
-        {left: "$$", right: "$$", display: false},   // Block math
+        {left: "$$", right: "$$", display: true},   // Block math
         {left: "$", right: "$", display: false}     // Inline math
-      ]
+      ],
+      // Enable inline math parsing at the start of the page
+      math: true
     });
   });
 </script>
