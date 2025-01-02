@@ -1,6 +1,6 @@
 layout: page
 title: "master"
-permalink: /origin
+permalink: /
 
 
 ##### it works
