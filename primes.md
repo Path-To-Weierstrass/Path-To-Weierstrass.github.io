@@ -34,9 +34,7 @@ Now that we have established that every number is either prime or composite, the
 The answer is yes, and we can prove it by contradiction:
 
 1. Let $n \in \mathbb{N}$ be the smallest number such that its prime factorization is not unique. Assume there are two different factorizations:
-   $$
-   a_1 \cdot a_2 \dots a_k = n = b_1 \cdot b_2 \dots b_p.
-   $$
+   $$a_1 \cdot a_2 \dots a_k = n = b_1 \cdot b_2 \dots b_p.$$
    Without loss of generality, assume $a_1$ divides $b_1 \cdot b_2 \dots b_p$. Since all $b_i$ are prime, it follows that $a_1 = b_j$ for some $j \in \{1, \dots, p\}$. We can assume $j = 1$ without loss of generality. This means that the number $\frac{n}{a_1}$ has two different prime factorizations, which contradicts the assumption that $n$ is the smallest such number.
 
 Thus, the prime factorization of a number is unique.
