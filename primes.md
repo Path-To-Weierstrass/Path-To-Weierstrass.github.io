@@ -25,7 +25,7 @@ Let’s see how this works with an example. Consider the number 112:
    $$
 
 The same algorithm can be written in Julia the following way: 
-''''
+```
 using Primes
 	function prime_decomposition(n)
 		result = []
@@ -60,7 +60,7 @@ using Primes
 		end
 		return -1
 	end
- ''''
+ ````
 
 Now that we have established that every number is either prime or composite, the remaining question is: Is this "decomposition" unique?
 
