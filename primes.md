@@ -33,9 +33,9 @@ using Primes
 		if isprime(n)
 			push!(result, n)
 		else
-			a,b = find_factors(n)
-			  if a == -1 || b == -1
-            	error("Unable to find factors for $n")
+		a,b = find_factors(n)
+		if a == -1 || b == -1
+            		error("Unable to find factors for $n")
        		 end
 			push!(result, prime_decomposition(a)...)
 			push!(result, prime_decomposition(b)...)
