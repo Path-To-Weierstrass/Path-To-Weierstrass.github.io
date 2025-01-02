@@ -11,7 +11,7 @@ One way to think about this is as follows:
 
 1. Every number is either prime or composite.
 2. If a number $$n$$ is not prime, then there exist numbers $$a, b \in \mathbb{N}$$ such that $$a \cdot b = n$$.
-3. Now, either $$a$$ is prime or not. If $$a$$ is prime, then it is one of the building blocks of $$n$$. If $$a$$ is not prime, we can decompose $$a$$ further into prime factors. We can repeat this process for $$b$$, and eventually, we obtain the prime factorization of $$n$$.
+3. Now, either $$a$$ is prime or not. If $$a$$ is prime, then it is one of the building blocks of $$n$$. If $$a$$ is not prime, then by definition we can decompose $$a$$ further into prime factors. We can repeat this process for $$b$$, and eventually, we obtain the prime factorization of $$n$$.
 
 Let’s see how this works with an example. Consider the number 112:
 
@@ -66,10 +66,12 @@ Now that we have established that every number is either prime or composite, the
 
 The answer is yes, and we can prove it by contradiction:
 
-1. Let $$n \in \mathbb{N}$$ be the smallest number such that its prime factorization is not unique. Assume there are two different factorizations:
+Let $$n \in \mathbb{N}$$ be the smallest number such that its prime factorization is not unique, we can assume this since we are working with $$\mathbb N$$ meaning there is a smallest prime number, for each property we can think of. Assume there are two different factorizations:
    $$
    a_1 \cdot a_2 \dots a_k = n = b_1 \cdot b_2 \dots b_p.
    $$
    Without loss of generality, assume $$a_1$$ divides $$b_1 \cdot b_2 \dots b_p$$. Since all $$b_i$$ are prime, it follows that $$a_1 = b_j$$ for some $$j \in \{1, \dots, p\}$$. We can assume $$j = 1$$ without loss of generality. This means that the number $$ \frac{n}{a_1} $$ has two different prime factorizations, which contradicts the assumption that $$n$$ is the smallest such number.
 
 Thus, the prime factorization of a number is unique.
+
+And with this we also have proven the ### Fundamental theorem of arithemtic
