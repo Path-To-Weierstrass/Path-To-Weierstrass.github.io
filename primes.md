@@ -1,4 +1,5 @@
-We have all probably heard of prime numbers. A number $$x \in \mathbb{N}$$ is called prime if and only if it is greater than 1 and is not divisible by any other numbers except 1 and itself. In other words, a number $$x \in \mathbb{N}$$ is prime if:
+We have all probably heard of prime number in different contexts. 
+As a reminder: a number $$x \in \mathbb{N}$$ is called prime if and only if it is greater than 1 and is not divisible by any other numbers except 1 and itself. In other words, a number $$x \in \mathbb{N}$$ is prime if:
 
 $$
 x \in \mathbb{N} \text{ is prime} \iff (\forall a, b \in \mathbb{N}: (a \cdot b = x \implies a = 1 \lor b = 1)).
@@ -22,6 +23,44 @@ Let’s see how this works with an example. Consider the number 112:
    $$
    112 = 2 \times 2 \times 2 \times 2 \times 7 = 2^4 \times 7.
    $$
+
+The same algorithm can be written in Julia the following way: 
+''''
+using Primes
+	function prime_decomposition(n)
+		result = []
+		if n==1
+			return [1]
+		end
+		if isprime(n)
+			push!(result, n)
+		else
+			a,b = find_factors(n)
+			  if a == -1 || b == -1
+            	error("Unable to find factors for $n")
+       		 end
+			push!(result, prime_decomposition(a)...)
+			push!(result, prime_decomposition(b)...)
+		end
+		return result
+		
+	end
+
+	function find_factors(n)
+		if n==1
+			return 1
+		end
+		if iseven(n)
+			return (Integer(2), Integer(n/2))
+		end
+		for i in 3:2:n
+			if n%i==0
+				return(Integer(i), Integer(n/i))
+			end
+		end
+		return -1
+	end
+ ''''
 
 Now that we have established that every number is either prime or composite, the remaining question is: Is this "decomposition" unique?
 
