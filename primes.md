@@ -5,18 +5,39 @@ date: 2025-01-02
 ---
 
 
-Prime numbers are often referred to as the building blocks of the natural numbers. But what exactly are they?
+We have all probably heard of prime numbers. A number \( x \in \mathbb{N} \) is called prime if and only if it is greater than 1 and is not divisible by any other numbers except 1 and itself. In other words, a number \( x \in \mathbb{N} \) is prime if:
 
-A **prime number** is a natural number greater than 1 that has no positive divisors other than 1 and itself. This means that a prime number cannot be divided evenly by any other number except for 1 and the number itself. For example, the number 7 is prime because it can only be divided by 1 and 7.
+\[
+x \in \mathbb{N} \text{ is prime} \iff (\forall a, b \in \mathbb{N}: (a \cdot b = x \implies a = 1 \lor b = 1)).
+\]
 
-On the other hand, numbers like 6 are **not** prime, because they can be divided by other numbers as well—specifically, 1, 2, 3, and 6.
+From this definition, we can immediately see that the first few prime numbers are: 2, 3, 5, 7, 11, and so on. At first glance, this may not seem particularly interesting, but after some thought, we realize that prime numbers are the basic building blocks of our number system.
 
-So, what does a list of prime numbers look like? The first few primes are quite simple to spot: **2, 3, 5, 7, 11, 13, 17, 19**. These numbers are all prime because none of them can be divided by anything other than 1 and themselves.
+One way to think about this is as follows:
 
-But primes don’t stop here. They continue indefinitely, and there's no simple pattern to predict them (though mathematicians have found interesting ways to approximate where the next prime might be). In fact, the search for large primes continues to be an exciting area of research, with practical applications in fields like cryptography.
+1. Every number is either prime or composite.
+2. If a number \( n \) is not prime, then there exist numbers \( a, b \in \mathbb{N} \) such that \( a \cdot b = n \).
+3. Now, either \( a \) is prime or not. If \( a \) is prime, then it is one of the building blocks of \( n \). If \( a \) is not prime, we can decompose \( a \) further into prime factors. We can repeat this process for \( b \), and eventually, we obtain the prime factorization of \( n \).
 
-### Why Are Prime Numbers Important?
+Let’s see how this works with an example. Consider the number 112:
 
-Prime numbers might seem like just a curious mathematical concept at first, but they have far-reaching implications. For example, they play a critical role in **cryptography**, which is the science of securing information. The security of many modern encryption systems relies on the difficulty of factoring large numbers into primes.
+1. \( 112 = 56 \times 2 \). Since 2 is prime, we proceed with 56.
+2. \( 56 = 2 \times 28 \). Again, 2 is prime, so we proceed with 28.
+3. \( 28 = 2 \times 14 \).
+4. \( 14 = 2 \times 7 \). Both 2 and 7 are prime.
+5. Thus, we can combine the results to get the prime factorization:
+   \[
+   112 = 2 \times 2 \times 2 \times 2 \times 7 = 2^4 \times 7.
+   \]
 
-Stay tuned for more insights into the world of prime numbers and other fascinating mathematical concepts!
+Now that we have established that every number is either prime or composite, the remaining question is: Is this "decomposition" unique?
+
+The answer is yes, and we can prove it by contradiction:
+
+1. Let \( n \in \mathbb{N} \) be the smallest number such that its prime factorization is not unique. Assume there are two different factorizations:
+   \[
+   a_1 \cdot a_2 \dots a_k = n = b_1 \cdot b_2 \dots b_p.
+   \]
+   Without loss of generality, assume \( a_1 \) divides \( b_1 \cdot b_2 \dots b_p \). Since all \( b_i \) are prime, it follows that \( a_1 = b_j \) for some \( j \in \{1, \dots, p\} \). We can assume \( j = 1 \) without loss of generality. This means that the number \( \frac{n}{a_1} \) has two different prime factorizations, which contradicts the assumption that \( n \) is the smallest such number.
+
+Thus, the prime factorization of a number is unique.
