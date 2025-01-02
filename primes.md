@@ -20,9 +20,7 @@ Let’s see how this works with an example. Consider the number 112:
 3. $$28 = 2 \times 14$$.
 4. $$14 = 2 \times 7$$ Both 2 and 7 are prime.
 5. Thus, we can combine the results to get the prime factorization:
-   $$
-   112 = 2 \times 2 \times 2 \times 2 \times 7 = 2^4 \times 7.
-   $$
+   $$112 = 2 \times 2 \times 2 \times 2 \times 7 = 2^4 \times 7.$$
 
 The same algorithm can be written in Julia the following way: 
 ```
