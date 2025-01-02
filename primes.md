@@ -1,9 +1,3 @@
----
-layout: post
-title: "Introduction to Prime Numbers"
-date: 2025-01-02
----
-
 We have all probably heard of prime numbers. A number $x \in \mathbb{N}$ is called prime if and only if it is greater than 1 and is not divisible by any other numbers except 1 and itself. In other words, a number $x \in \mathbb{N}$ is prime if:
 
 $$
@@ -20,10 +14,10 @@ One way to think about this is as follows:
 
 Let’s see how this works with an example. Consider the number 112:
 
-1. $112 = 56 \times 2$. Since 2 is prime, we proceed with 56.
-2. $56 = 2 \times 28$. Again, 2 is prime, so we proceed with 28.
-3. $28 = 2 \times 14$.
-4. $14 = 2 \times 7$. Both 2 and 7 are prime.
+1. $$ 112 = 56 \times 2 $$ Since 2 is prime, we proceed with 56.
+2. $$ 56 = 2 \times 28 $$ Again, 2 is prime, so we proceed with 28.
+3. $$ 28 = 2 \times 14 $$.
+4. $$ 14 = 2 \times 7 $$ Both 2 and 7 are prime.
 5. Thus, we can combine the results to get the prime factorization:
    $$
    112 = 2 \times 2 \times 2 \times 2 \times 7 = 2^4 \times 7.
@@ -34,7 +28,9 @@ Now that we have established that every number is either prime or composite, the
 The answer is yes, and we can prove it by contradiction:
 
 1. Let $n \in \mathbb{N}$ be the smallest number such that its prime factorization is not unique. Assume there are two different factorizations:
-   $$a_1 \cdot a_2 \dots a_k = n = b_1 \cdot b_2 \dots b_p.$$
-   Without loss of generality, assume $a_1$ divides $b_1 \cdot b_2 \dots b_p$. Since all $b_i$ are prime, it follows that $a_1 = b_j$ for some $j \in \{1, \dots, p\}$. We can assume $j = 1$ without loss of generality. This means that the number $\frac{n}{a_1}$ has two different prime factorizations, which contradicts the assumption that $n$ is the smallest such number.
+   $$
+   a_1 \cdot a_2 \dots a_k = n = b_1 \cdot b_2 \dots b_p.
+   $$
+   Without loss of generality, assume $a_1$ divides $b_1 \cdot b_2 \dots b_p$. Since all $b_i$ are prime, it follows that $a_1 = b_j$ for some $j \in \{1, \dots, p\}$. We can assume $j = 1$ without loss of generality. This means that the number $$ \frac{n}{a_1} $$ has two different prime factorizations, which contradicts the assumption that $n$ is the smallest such number.
 
 Thus, the prime factorization of a number is unique.
