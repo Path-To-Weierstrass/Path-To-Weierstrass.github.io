@@ -4,7 +4,6 @@ title: "Introduction to Prime Numbers"
 date: 2025-01-02
 ---
 
-# Introduction to Prime Numbers
 
 Prime numbers are often referred to as the building blocks of the natural numbers. But what exactly are they?
 
