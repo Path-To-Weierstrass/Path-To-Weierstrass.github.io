@@ -1,4 +1,4 @@
-#### A brief introduction to Prime numbers
+#### A brief introduction to Prime numbers and the fundamental theorem of arithmetic
 
 We have all probably heard of prime number in different contexts. 
 As a reminder: a number $$x \in \mathbb{N}$$ is called prime if and only if it is greater than 1 and is not divisible by any other numbers except 1 and itself. In other words, a number $$x \in \mathbb{N}$$ is prime if:
@@ -59,6 +59,11 @@ using Primes
 		return -1
 	end
  ````
+
+You might quickly realize that this algorithm is super inefficient -  issues on optimization and the importance of "computability" of prime numbers are discussed in [Prime Number Computation]("https://path-to-weierstrass.github.io/primes/prime-computation")
+
+
+
 
 Now that we have established that every number is either prime or composite, the remaining question is: Is this "decomposition" unique?
 
