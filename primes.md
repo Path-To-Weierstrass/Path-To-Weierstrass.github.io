@@ -24,7 +24,8 @@ Let’s see how this works with an example. Consider the number 112:
 
 The same algorithm can be written in Julia the following way: 
 ```
-using Primes
+begin
+ 	using Primes
 	function prime_decomposition(n)
 		result = []
 		if n==1
@@ -58,6 +59,7 @@ using Primes
 		end
 		return -1
 	end
+end
  ````
 
 You might quickly realize that this algorithm is super inefficient -  issues on optimization and the importance of "computability" of prime numbers are discussed in [Prime Number Computation](/primes/prime-computation)
